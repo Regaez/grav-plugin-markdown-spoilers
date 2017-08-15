@@ -2,6 +2,8 @@
 
 The **Markdown Spoilers** Plugin is for [Grav CMS](http://github.com/getgrav/grav). It extends the Markdown parser to allow the rendering of spoiler elements through simple markdown shortcuts.
 
+![](assets/screenshot.png)
+
 ## Installation
 
 Installing the Markdown Spoilers plugin can be done in one of two ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
