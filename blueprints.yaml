@@ -1,0 +1,37 @@
+name: Markdown Spoilers
+version: 0.1.0
+description: Allows the rendering of spoiler elements through markdown
+icon: asterisk
+author:
+  name: Thomas Threadgold
+  email: thomas@threadgold.nz
+  url: http://threadgold.nz
+homepage: https://github.com/regaez/grav-plugin-markdown-spoilers
+keywords: grav, plugin, markdown, spoilers
+bugs: https://github.com/regaez/grav-plugin-markdown-spoilers/issues
+docs: https://github.com/regaez/grav-plugin-markdown-spoilers/blob/master/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    include_css:
+      type: toggle
+      label: Include CSS
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

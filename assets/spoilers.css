@@ -1,0 +1,66 @@
+.md-spoiler {
+    background-color: #ffebee;
+    padding: 0.5em;
+    border-left: 10px solid #ffcdd2;
+    margin-bottom: 1.2em;
+}
+
+.md-spoiler[data-label]::before {
+    content: attr(data-label);
+    display: inline-block;
+    color: #e57373;
+    font-weight: bold;
+    padding-right: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 3px;
+}
+
+.md-spoiler:hover > .md-spoiler__line,
+.md-spoiler:focus > .md-spoiler__line,
+.md-spoiler:active > .md-spoiler__line {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+
+.md-spoiler.md-spoiler--inline {
+    margin: 0;
+    padding: 0.25em 0.5em;
+    border-left-width: 5px;
+}
+
+.md-spoiler.md-spoiler--inline[data-label]::before {
+    margin: 0;
+}
+
+.md-spoiler__line {
+    margin: 0.5em 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out, visibility 0ms 200ms linear;
+}
+
+.md-spoiler__line:first-child {
+    margin-top: 0;
+}
+.md-spoiler__line:last-child {
+    margin-bottom: 0;
+}
+
+.md-spoiler[data-label~="Mild"] {
+    background-color: #e8f5e9;
+    border-color: #c8e6c9;
+}
+
+.md-spoiler[data-label~="Mild"]::before {
+    color: #81c784;
+}
+
+.md-spoiler[data-label~="Moderate"] {
+    background-color: #fff3e0;
+    border-color: #ffe0b2;
+}
+
+.md-spoiler[data-label~="Moderate"]::before {
+    color: #ffb74d;
+}
