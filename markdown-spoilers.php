@@ -102,7 +102,7 @@ class MarkdownSpoilersPlugin extends Plugin
         $markdown->inlineSpoilers = function($Excerpt) {
             // Matches spoiler syntax:
             // ??[optional label] some spoiler message??
-            if (preg_match('/^(\?{2})(?:\[([^\]]*)\]\s*)?(\S.*\S)(\?{2})/', $Excerpt['text'], $matches))
+            if (preg_match('/^(\?{2})(?:\[([^\]]*)\]\s*)?(\S[^\?]*\S)(\?{2})/', $Excerpt['text'], $matches))
             {
                 $extent = strlen($matches[0]);
                 $label = ltrim($matches[2]);

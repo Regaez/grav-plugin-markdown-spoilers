@@ -137,6 +137,17 @@ With the plugin's included CSS, `Mild` will render as green and `Moderate` as ye
 >! [Moderate] This is a moderate spoiler
 ```
 
+### Nested Spoilers
+
+You can also put _inline_ spoilers within `block` spoilers, if desired. Perhaps you want to have a `Mild` spoiler block, which contains several `Severe` or `Moderate` spoilers inside it? Simple!
+
+```markdown
+>? [Mild] This is a block spoiler with a ??[Moderate] nested inline spoiler!?? You can have multiple nested inline spoilers within a single block.
+>?
+>? ??[Severe] They can even be on different lines.?? Therefore, you can hide greater spoilers within lesser spoilers!
+```
+> **NOTE:** You cannot nest `inline` spoilers within other `inline` spoilers.
+
 ## Extending CSS
 
 You can easily extend the default CSS implementation to provide different types of spoilers. By utilising the attribute selector, you can style the spoiler based on a keyword given as one part of the label.
